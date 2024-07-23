@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './NoteForm.css';
 
-const NoteForm = ({ addNote }) => {
+const NoteForm = ({ addNote, clearNotes }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [isImportant, setIsImportant] = useState(false);
@@ -16,7 +16,7 @@ const NoteForm = ({ addNote }) => {
       isImportant,
     };
 
-    console.log("New note submitted:", newNote);
+    console.log("Nueva nota añadida:", newNote);
 
     addNote(newNote);
 
@@ -47,9 +47,13 @@ const NoteForm = ({ addNote }) => {
           onChange={(e) => setIsImportant(e.target.checked)}
         />
       </label>
-      <button type="submit">Agregar</button>
+      <div className="buttons">
+        <button type="submit">Agregar</button>
+        <button type="button" onClick={clearNotes}>Borrar todas las notas</button>
+      </div>
     </form>
   );
 };
 
 export default NoteForm;
+

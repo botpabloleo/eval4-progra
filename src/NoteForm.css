@@ -57,7 +57,15 @@ label {
   }
 }
 
+.buttons {
+  display: flex;
+  gap: 10px;
+}
 
+button[type="button"] {
+  background-color: red;
+  color: white;
+}
   
   
   
