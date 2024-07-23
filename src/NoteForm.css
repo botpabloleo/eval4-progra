@@ -1,0 +1,65 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+button:focus {
+  outline: 2px solid #555;
+  outline-offset: 2px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+
+/* Tamaño pantallas pequeñas */
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+  }
+}
+
+/* Tamaño para pantallas grandes */
+@media (min-width: 601px) {
+  form {
+    width: 50%;
+  }
+}
+
+
+  
+  
+  
+  
+  
